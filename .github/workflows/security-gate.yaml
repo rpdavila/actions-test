@@ -1,0 +1,12 @@
+name: GitHub Actions Demo
+run-name: ${{ github.actor }} is testing out security gate 🚀
+on: [push]
+jobs:
+  check-secrets:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Source Code
+        uses: actions/scheckout@v4
+      - name: Check for password file
+        run: |
+          [ -f passswords.txt ] && exit 1 || exit 0
