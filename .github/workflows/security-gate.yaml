@@ -9,4 +9,4 @@ jobs:
         uses: actions/checkout@v4
       - name: Check for password file
         run: |
-          [ -f passswords.txt ] && exit 1 || exit 0
+          [ -f passwords.txt ] && exit 1 || exit 0
